@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sniper King</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: var(--primary);
+    }
+
+    :root {
+      --primary: #F9FBE7;
+      --secondary: #FEA1A1;
+      --tertiary: #ECCDB4;
+      --text: #FEA1A1;
+    }
+
+    .heading {
+      vertical-align: middle;
+      display: inline-block;
+      font-size: 3.3rem;
+      margin-top: 8px;
+      margin-left: 8px;
+      text-align: left;
+      font-weight: bold;
+      color: var(--text);
+    }
+
+    .navigation {
+      margin-top: 8px;
+      vertical-align: middle;
+      text-align: center;
+      float: right;
+
+    }
+
+    .navigation ul {
+      vertical-align: middle;
+      list-style: none;
+    }
+
+    .navigation ul li {
+      vertical-align: middle;
+      text-align: center;
+      color: var(--text);
+      font-weight: bold;
+      font-size: 1.3rem;
+      display: inline-block;
+      padding: 5px;
+      padding-left: 8px;
+      padding-right: 8px;
+      border-radius: 5px;
+      transition: background-color 0.15s, color 0.15s;
+      cursor: pointer;
+      margin-left: 12px;
+    }
+
+    .navigation ul li:hover {
+      background-color: var(--text);
+      color: var(--primary);
+    }
+
+    .top-bar {
+      margin-bottom: 3rem;
+    }
+
+    .profile {
+      margin-left: auto;
+      margin-right: auto;
+      width: 250px;
+      border-radius: 12px;
+      height: auto;
+      align-items: center;
+      padding: 15px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+      margin-bottom: 25rem;
+    }
+
+    .flag {
+      width: 400px;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+      margin-bottom: 5rem;
+    }
+
+    .profile .profile-picture {
+
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      border-color: var(--secondary);
+
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .name {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: var(--secondary);
+      margin-bottom: 0px;
+    }
+
+    .user-tag {
+      text-align: center;
+      color: var(--tertiary);
+      margin-top: 2px;
+      margin-bottom: 25px;
+    }
+
+    .skills {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--secondary);
+      font-weight: bold;
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+
+    .skill {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-align: center;
+      color: var(--primary);
+      background-color: var(--secondary);
+      font-weight: bold;
+      padding: 0.3rem;
+      border-radius: 0.6rem;
+      margin-top: 4px;
+      margin-bottom: 2px;
+
+    }
+
+    .heading-section {
+      font-size: 2.8rem;
+      text-align: center;
+      font-weight: bold;
+      color: var(--secondary);
+    }
+
+    .about-text {
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-right: 12%;
+      margin-left: 12%;
+      color: var(--tertiary);
+    }
+
+    .about-me {
+      margin-bottom: 15rem;
+    }
+
+    .skill-div {
+      align-items: center;
+      margin: auto;
+      width: 200px;
+    }
+
+    .anchors {
+      text-decoration: none;
+    }
+
+    .crew-div{
+      
+      
+      
+      align-items: center;
+     
+      
+      margin-bottom: 25rem;
+    }
+    .members{
+      display: block;
+      width: 898px;
+      margin: auto;
+    }
+
+    .crew-profile {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 250px;
+      border-radius: 12px;
+      height: auto;
+      align-items: center;
+      padding: 15px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+      
+      margin-right: 1rem;
+      
+
+    }
+
+    .crew-profile .profile-picture {
+
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50px;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      border-color: var(--secondary);
+
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <a href="">
+      <h1 class="heading">USSOP</h1>
+    </a>
+    <nav class="navigation">
+      <ul>
+        <a class="anchors" href="#about-me">
+          <li>About me</li>
+        </a>
+        <a class="anchors" href="#profile-red">
+          <li>Profile</li>
+        </a>
+        <a class="anchors" href="#crew">
+          <li>My Crew</li>
+        </a>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="about-me">
+    <h2 class="heading-section">About Me</h2>
+    <img class="flag" src="flag.jpg">
+    <p class="about-text">
+      I am Usopp, the brave sniper of the Straw Hat Pirates! My real name is Sogeking, but you can call me Usopp. I come
+      from the tiny village of Syrup on the Gecko Islands, and I've always been a dreamer. My dream? To become a brave
+      warrior of the sea and achieve the title of "Sniper King."
+    </p>
+
+    <p class="about-text">You might hear stories about my tall tales and exaggerations, but that's just me adding a bit
+      of flair to make things interesting. Deep down, I'm a loyal and courageous member of the crew. I joined the Straw
+      Hat Pirates to fulfill my dream and to protect my friends. My sharpshooting skills have come in handy many times,
+      whether it's taking down enemies from a distance or providing support during our adventures.</p>
+  </section>
+
+  <h2 id="profile-red" class="heading-section">Profile</h2>
+
+  <section class="profile" id="profile">
+
+
+
+    <img class="profile-picture" src="ussop.jpg">
+    <h3 class="name">Ussop</h3>
+    <p class="user-tag"><em>@IamTheRealCaptain</em></p>
+
+
+    <h4 class="skills">Skills</h4>
+    <p class="skill">Navigator</p>
+    <p class="skill">Ship Maintainance</p>
+    <p class="skill">Marksman</p>
+    <p class="skill">Story Telling</p>
+    <p class="skill">Knitting</p>
+    <p class="skill">Carpenter</p>
+
+  </section>
+  
+  
+  <div class="crew-div" id="crew">
+    <h2 class="heading-section">My Crew</h2>
+    <div class="members">
+      <section class="crew-profile">
+
+
+
+        <img class="profile-picture" src="zoro.jpg">
+        <h3 class="name">Roronoa Zoro</h3>
+        <p class="user-tag"><em>@BestSwordsmen</em></p>
+  
+  
+        <h4 class="skills">Skills</h4>
+        <p class="skill">Swordsmenr</p>
+        <p class="skill">Combat</p>
+        <p class="skill">Agility</p>
+        <p class="skill">Katanas</p>
+        <p class="skill">Attacker</p>
+        
+  
+      </section>
+      <section class="crew-profile">
+  
+  
+  
+        <img class="profile-picture" src="nami.jpg">
+        <h3 class="name">Nami</h3>
+        <p class="user-tag"><em>@BehindYou</em></p>
+  
+  
+        <h4 class="skills">Skills</h4>
+        <p class="skill">Navigator</p>
+        <p class="skill">Map Designing</p>
+        <p class="skill">Slight of Hand</p>
+        <p class="skill">Thief</p>
+        <p class="skill">Melee Combat</p>
+        <p class="skill">Stealth</p>
+        <p class="skill">Thief</p>
+  
+      </section>
+      <section class="crew-profile">
+  
+  
+  
+        <img class="profile-picture" src="monkey.jpg">
+        <h3 class="name">Monkey D. Luffy</h3>
+        <p class="user-tag"><em>@PirateKing</em></p>
+  
+  
+        <h4 class="skills">Skills</h4>
+        <p class="skill">Pirate King</p>
+        <p class="skill">Flexible</p>
+        <p class="skill">Demon Fruit Eater</p>
+        
+        <p class="skill">Dedicated</p>
+        <p class="skill">Firendly</p>
+        <p class="skill">Supportive</p>
+  
+      </section>
+    </div>
+    
+    
+  
+  </div>
+
+</body>
+
+</html>
